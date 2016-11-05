@@ -1,0 +1,25 @@
+body {
+    background: #141414;
+    overflow-y: scroll;
+    overflow-x: hidden; /* hides the horizontal scroll bar */
+}
+
+img {
+    height: 80vh;
+}
+
+#gombruna {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#texts {
+    height: 20vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: #FFF;
+    font-size: 4vw;
+    font-family: Helvetica, Arial, sans-serif;
+}
