@@ -5,7 +5,7 @@ function timeout() {
     text.innerHTML = getRandomText(texts);
     text.style.cssText = "font-size: 4vw";
     timeout();
-  }, 5000);
+  }, 60000);
 }
 
 function getRandomText(items)
