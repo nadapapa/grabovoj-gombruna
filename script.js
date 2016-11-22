@@ -18,6 +18,6 @@ $.getJSON( "texts.json", function( data ) {
     numberDom.html(number).textfill({
       maxFontPixels: 200
     });
-  }, 30 * 100);
+  }, 30 * 1000);
 
 });
