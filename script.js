@@ -1,11 +1,13 @@
-var text = document.getElementById('texts');
 
 function timeout() {
   setTimeout(function () {
-    text.innerHTML = getRandomText(texts);
-    text.style.cssText = "font-size: 4vw";
+    var text = $("#texts");
+    text.html('<span>' + getRandomText(texts) + '</span>');
+    text.textfill({ 
+        maxFontPixels: 200
+    });
     timeout();
-  }, 60000);
+  }, 30 * 1000);
 }
 
 function getRandomText(items)
