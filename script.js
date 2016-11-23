@@ -1,18 +1,23 @@
+$.getJSON( "texts.json", function( data ) {
+  setInterval(function () {
 
-function timeout() {
-  setTimeout(function () {
-    var text = $("#texts");
-    text.html('<span>' + getRandomText(texts) + '</span>');
-    text.textfill({ 
-        maxFontPixels: 200
+    var random = function (obj) {
+      var keys = Object.keys(obj);
+      return keys[ keys.length * Math.random() << 0];
+    };
+
+    var number = random(data);
+
+    var text = $("#texts"),
+        numberDom = $("#number");
+    text.html('<span>' + data[number] + '</span>');
+    text.textfill({
+      maxFontPixels: 200
     });
-    timeout();
+
+    numberDom.html(number).textfill({
+      maxFontPixels: 200
+    });
   }, 30 * 1000);
-}
 
-function getRandomText(items)
-{
-  return items[Math.floor(Math.random()*items.length)];
-}
-
-timeout();
+});
