@@ -15,7 +15,11 @@ function showRandomNumber(data) {
     maxFontPixels: 200
   });
 
-  numberDom.html(number).textfill({
+  numberDom.html(function(i, html) {
+  var chars = $.trim(number).split("");
+
+  return '<span>' + chars.join('</span><span>') + '</span>';
+}).textfill({
     maxFontPixels: 200
   });
 }
