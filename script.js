@@ -1,3 +1,5 @@
+checkDecember();
+
 $.getJSON( "texts.json", function( data ) {
   showRandomNumber(data);
   setInterval(function () {
@@ -27,4 +29,13 @@ function showRandomNumber(data) {
 function random(obj) {
   var keys = Object.keys(obj);
   return keys[ keys.length * Math.random() << 0];
-};
+}
+
+function checkDecember() {
+  var d = new Date();
+  n = d.getMonth();
+
+  if (n == 11) {
+    $.fn.snow();
+  }
+}
