@@ -4,7 +4,7 @@ $.getJSON( "texts.json", function( data ) {
   showRandomNumber(data);
   setInterval(function () {
     showRandomNumber(data);
-  }, 30 * 1000);
+  }, 15 * 1000);
 });
 
 function showRandomNumber(data) {
